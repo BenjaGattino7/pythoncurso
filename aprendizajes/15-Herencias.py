@@ -1,19 +1,17 @@
-class animal:
+class Padre:
+    def hablar(self):
+        print("hola")
 
-    def __init__(self,edad,color):
-        self.edad = edad
-        self.color = color
+class Madre:
+    def reir(self):
+        print("jajaja")
 
-
-    def nacer(self):
-        print("Este animal ha nacido")
-
+class Hijo(Padre,Madre):
     pass
 
 
-class pajaro(animal):
+class Nieto(Hijo):
     pass
 
-mipajaro= pajaro(2, 'amarillo')
-
-print(mipajaro.color)
+miNieto= Nieto()
+miNieto.hablar()
